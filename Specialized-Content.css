@@ -1,0 +1,514 @@
+/* D&D Specialized Content Types - Additional CSS Module */
+/* This file works alongside the main phb-enhanced-mobile.css */
+
+/* Adventure Hooks Styling */
+.adventure-hook {
+    background: 
+        linear-gradient(135deg, rgba(255, 248, 235, 0.95) 0%, rgba(248, 238, 220, 0.95) 100%),
+        radial-gradient(circle at 70% 20%, rgba(139, 69, 19, 0.08) 0%, transparent 50%) !important;
+    border: 2px solid transparent !important;
+    background-clip: padding-box !important;
+    border-radius: 12px !important;
+    padding: 1.5em 2em !important;
+    margin: 2em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.adventure-hook::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -2px !important;
+    left: -2px !important;
+    right: -2px !important;
+    bottom: -2px !important;
+    background: linear-gradient(45deg, #8B4513, #DAA520, #8B4513, #CD853F) !important;
+    border-radius: 14px !important;
+    z-index: -1 !important;
+}
+
+.adventure-hook::after {
+    content: "🗡️" !important;
+    position: absolute !important;
+    top: -12px !important;
+    right: 1.5em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.5em !important;
+    font-size: 1.3em !important;
+}
+
+.adventure-hook-title {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #8B4513 !important;
+    font-size: 1.25em !important;
+    margin: 0 0 1em 0 !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid #DAA520 !important;
+    padding-bottom: 0.5em !important;
+}
+
+.adventure-hook * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Random Tables Styling */
+.random-table {
+    background: 
+        linear-gradient(135deg, rgba(248, 245, 235, 0.98) 0%, rgba(242, 235, 220, 0.98) 100%),
+        radial-gradient(circle at 30% 70%, rgba(75, 0, 130, 0.06) 0%, transparent 50%) !important;
+    border: 3px solid #4B0082 !important;
+    border-radius: 15px !important;
+    padding: 1.5em !important;
+    margin: 2.5em 0 !important;
+    box-shadow: 
+        0 6px 16px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.8) !important;
+    position: relative !important;
+}
+
+.random-table::before {
+    content: "🎲" !important;
+    position: absolute !important;
+    top: -15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.8em !important;
+    font-size: 1.5em !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.random-table-title {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #4B0082 !important;
+    font-size: 1.3em !important;
+    text-align: center !important;
+    margin: 0 0 1.2em 0 !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.random-table table {
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: 2px solid #9370DB !important;
+}
+
+.random-table th {
+    background: linear-gradient(180deg, #9370DB 0%, #8A2BE2 50%, #4B0082 100%) !important;
+    color: #fff !important;
+}
+
+.random-table td:first-child {
+    font-weight: bold !important;
+    text-align: center !important;
+    color: #4B0082 !important;
+    background-color: rgba(147, 112, 219, 0.1) !important;
+}
+
+.random-table * {
+    background-color: transparent !important;
+}
+
+/* Campaign Notes Styling */
+.campaign-note {
+    background: 
+        linear-gradient(135deg, rgba(255, 252, 248, 0.95) 0%, rgba(250, 248, 240, 0.95) 100%),
+        radial-gradient(circle at 80% 20%, rgba(188, 143, 143, 0.08) 0%, transparent 50%) !important;
+    border-left: 5px solid #BC8F8F !important;
+    border-right: 1px solid #D2B48C !important;
+    border-top: 1px solid #D2B48C !important;
+    border-bottom: 1px solid #D2B48C !important;
+    border-radius: 0 8px 8px 0 !important;
+    padding: 1.3em 1.8em !important;
+    margin: 1.8em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.campaign-note::before {
+    content: "📝" !important;
+    position: absolute !important;
+    top: -8px !important;
+    left: 1em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.3em !important;
+    font-size: 1.2em !important;
+}
+
+.campaign-note-title {
+    font-family: "Cormorant Garamond", serif !important;
+    font-weight: 600 !important;
+    color: #8B4513 !important;
+    font-size: 1.2em !important;
+    margin: 0 0 0.8em 0 !important;
+    font-style: italic !important;
+}
+
+.campaign-note * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* NPC Quick Reference */
+.npc-quick {
+    background: 
+        linear-gradient(135deg, rgba(255, 250, 240, 0.95) 0%, rgba(245, 240, 230, 0.95) 100%),
+        radial-gradient(circle at 60% 40%, rgba(160, 82, 45, 0.08) 0%, transparent 50%) !important;
+    border: 2px solid #A0522D !important;
+    border-radius: 10px !important;
+    padding: 1.2em !important;
+    margin: 1.5em 0 !important;
+    position: relative !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.npc-quick::before {
+    content: "👤" !important;
+    position: absolute !important;
+    top: -10px !important;
+    right: 1em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.4em !important;
+    font-size: 1.2em !important;
+    border-radius: 50% !important;
+}
+
+.npc-name {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #A0522D !important;
+    font-size: 1.2em !important;
+    margin: 0 0 0.5em 0 !important;
+}
+
+.npc-details {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5em !important;
+    margin: 0.8em 0 !important;
+    font-size: 0.95em !important;
+}
+
+.npc-detail-label {
+    font-weight: bold !important;
+    color: #8B4513 !important;
+}
+
+.npc-quick * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Location Description */
+.location {
+    background: 
+        linear-gradient(135deg, rgba(240, 255, 240, 0.95) 0%, rgba(230, 250, 230, 0.95) 100%),
+        radial-gradient(circle at 40% 60%, rgba(34, 139, 34, 0.08) 0%, transparent 50%) !important;
+    border: 2px solid #228B22 !important;
+    border-radius: 12px !important;
+    padding: 1.5em !important;
+    margin: 2em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.location::before {
+    content: "🏰" !important;
+    position: absolute !important;
+    top: -12px !important;
+    left: 1.5em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.5em !important;
+    font-size: 1.4em !important;
+}
+
+.location-name {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #228B22 !important;
+    font-size: 1.25em !important;
+    margin: 0 0 1em 0 !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.location * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Quest Tracker */
+.quest {
+    background: 
+        linear-gradient(135deg, rgba(255, 245, 238, 0.95) 0%, rgba(250, 235, 215, 0.95) 100%),
+        radial-gradient(circle at 70% 30%, rgba(255, 165, 0, 0.08) 0%, transparent 50%) !important;
+    border: 3px solid #FF8C00 !important;
+    border-radius: 15px !important;
+    padding: 1.8em !important;
+    margin: 2.5em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.quest::before {
+    content: "⚔️" !important;
+    position: absolute !important;
+    top: -15px !important;
+    right: 2em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.6em !important;
+    font-size: 1.6em !important;
+    border-radius: 50% !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.quest-title {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #FF8C00 !important;
+    font-size: 1.3em !important;
+    margin: 0 0 1.2em 0 !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 2px solid #DAA520 !important;
+    padding-bottom: 0.5em !important;
+}
+
+.quest-status {
+    display: inline-block !important;
+    padding: 0.3em 0.8em !important;
+    border-radius: 15px !important;
+    font-size: 0.9em !important;
+    font-weight: bold !important;
+    margin: 0.5em 0 !important;
+}
+
+.quest-status.active {
+    background-color: #90EE90 !important;
+    color: #006400 !important;
+}
+
+.quest-status.completed {
+    background-color: #FFD700 !important;
+    color: #B8860B !important;
+}
+
+.quest-status.failed {
+    background-color: #FFA07A !important;
+    color: #8B0000 !important;
+}
+
+.quest * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Combat Encounter */
+.encounter {
+    background: 
+        linear-gradient(135deg, rgba(255, 240, 240, 0.95) 0%, rgba(248, 230, 230, 0.95) 100%),
+        radial-gradient(circle at 20% 80%, rgba(220, 20, 60, 0.08) 0%, transparent 50%) !important;
+    border: 3px solid #DC143C !important;
+    border-radius: 12px !important;
+    padding: 1.5em !important;
+    margin: 2em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 5px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.encounter::before {
+    content: "⚡" !important;
+    position: absolute !important;
+    top: -12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.6em !important;
+    font-size: 1.4em !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.encounter-title {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #DC143C !important;
+    font-size: 1.25em !important;
+    margin: 0 0 1em 0 !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.encounter-difficulty {
+    display: inline-block !important;
+    padding: 0.4em 1em !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    font-size: 0.9em !important;
+    margin: 0.5em 0 1em 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.encounter-difficulty.easy {
+    background-color: #90EE90 !important;
+    color: #006400 !important;
+}
+
+.encounter-difficulty.medium {
+    background-color: #FFD700 !important;
+    color: #B8860B !important;
+}
+
+.encounter-difficulty.hard {
+    background-color: #FFA500 !important;
+    color: #FF4500 !important;
+}
+
+.encounter-difficulty.deadly {
+    background-color: #FF6347 !important;
+    color: #8B0000 !important;
+}
+
+.encounter * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Session Recap */
+.session-recap {
+    background: 
+        linear-gradient(135deg, rgba(248, 248, 255, 0.95) 0%, rgba(240, 240, 250, 0.95) 100%),
+        radial-gradient(circle at 50% 50%, rgba(123, 104, 238, 0.08) 0%, transparent 50%) !important;
+    border: 2px solid #7B68EE !important;
+    border-radius: 10px !important;
+    padding: 1.5em !important;
+    margin: 2em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.session-recap::before {
+    content: "📖" !important;
+    position: absolute !important;
+    top: -10px !important;
+    right: 1.5em !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.4em !important;
+    font-size: 1.3em !important;
+}
+
+.session-recap-title {
+    font-family: "Cinzel", serif !important;
+    font-weight: bold !important;
+    color: #7B68EE !important;
+    font-size: 1.2em !important;
+    margin: 0 0 1em 0 !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.session-recap * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Treasure/Loot */
+.treasure {
+    background: 
+        linear-gradient(135deg, rgba(255, 255, 240, 0.95) 0%, rgba(250, 250, 210, 0.95) 100%),
+        radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%) !important;
+    border: 3px solid #FFD700 !important;
+    border-radius: 15px !important;
+    padding: 1.5em !important;
+    margin: 2em 0 !important;
+    position: relative !important;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(255, 215, 0, 0.3) !important;
+}
+
+.treasure::before {
+    content: "💰" !important;
+    position: absolute !important;
+    top: -15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: var(--phb-cream, #fdf1dc) !important;
+    padding: 0 0.6em !important;
+    font-size: 1.6em !important;
+    border-radius: 50% !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.treasure-title {
+    font-family: "Cinzel Decorative", serif !important;
+    font-weight: bold !important;
+    color: #B8860B !important;
+    font-size: 1.3em !important;
+    margin: 0 0 1.2em 0 !important;
+    text-align: center !important;
+    text-shadow: 
+        1px 1px 2px rgba(255, 255, 255, 0.8),
+        0 0 8px rgba(255, 215, 0, 0.4) !important;
+}
+
+.treasure * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Mobile Responsiveness for New Elements */
+@media screen and (max-width: 768px) {
+    .adventure-hook, .random-table, .campaign-note, .npc-quick, 
+    .location, .quest, .encounter, .session-recap, .treasure {
+        padding: 1.2em !important;
+        margin: 1.5em 0 !important;
+    }
+    
+    .npc-details {
+        grid-template-columns: 1fr !important;
+        gap: 0.3em !important;
+    }
+    
+    .quest-title, .encounter-title, .treasure-title,
+    .random-table-title, .location-name {
+        font-size: 1.2em !important;
+    }
+    
+    .adventure-hook-title, .campaign-note-title, .npc-name,
+    .session-recap-title {
+        font-size: 1.1em !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .adventure-hook::after, .campaign-note::before, .npc-quick::before,
+    .location::before, .quest::before, .encounter::before, 
+    .session-recap::before, .treasure::before, .random-table::before {
+        font-size: 1.1em !important;
+    }
+    
+    .treasure {
+        box-shadow: 
+            0 4px 10px rgba(0, 0, 0, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    }
+}
