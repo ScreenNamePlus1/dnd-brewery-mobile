@@ -1025,6 +1025,7 @@ const styles = StyleSheet.create({
 
   newButtonText: {
 
+
 # Remaining Files (10-14) - D&D Brewery
 
 ## File 10: src/screens/EditorScreen.tsx
