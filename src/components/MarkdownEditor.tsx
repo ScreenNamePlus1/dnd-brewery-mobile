@@ -32,7 +32,7 @@ export const MarkdownEditor: React.FC<MarkdownEditorProps> = ({
           value={localContent}
           onChangeText={handleTextChange}
           multiline
-          placeholder="Start writing your D&D content...
+          placeholder={`Start writing your D&D content...
 
 # Monster Name
 *Medium humanoid, lawful good*
@@ -41,7 +41,7 @@ export const MarkdownEditor: React.FC<MarkdownEditorProps> = ({
 **Hit Points** 58 (9d8 + 18)
 **Speed** 30 ft.
 
-```statblock
+\`\`\`statblock
 Name: Veteran
 Type: Medium humanoid (human), any alignment
 AC: 17
@@ -55,9 +55,11 @@ WIS: 11
 CHA: 10
 Skills: Athletics +5, Perception +2
 Challenge: 3
+\`\`\`
 
 Or create spells:
 
+\`\`\`spell
 Name: Magic Missile
 Level: 1
 School: Evocation
@@ -66,7 +68,7 @@ Range: 120 feet
 Components: V, S
 Duration: Instantaneous
 Description: You create three glowing darts of magical force.
-```"
+\`\`\``}
           placeholderTextColor={colors.textSecondary}
           textAlignVertical="top"
           autoCapitalize="sentences"
