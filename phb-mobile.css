@@ -1,52 +1,30 @@
-/* Complete D&D 5e PHB Style - Mobile Compatible Version */
-/* Based on Homebrewery but optimized for mobile PDF export */
+/* D&D 5e PHB Style - Fixed for Obsidian Dark Theme Override */
+/* This CSS forces the parchment look even in dark mode */
 
-/* CSS Reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1}
-ol,ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-table{border-collapse:collapse;border-spacing:0}
-
-/* Font Imports - Fallbacks for mobile */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 
-/* Font Face Definitions */
-@font-face {
-    font-family: BookSanity;
-    src: url('data:font/opentype;base64,T1RUTwANAIAAAwBQQ0ZGICoR+RcAAAegAABM00RTSUcAAAABAABXJAAAAAhHREVGALsAAwAAVywAAAAYR1BPU2uUukYAAFdEAAAmKEdTVULlMciwAAB9bAAABbxPUy8yOu7UOAAAAUAAAABgY21hcJ/aplYAAASIAAAC9mhlYWQH3AJJAAAA3AAAADZoaGVhB6kDEwAAARQAAAAkaG10eFhaGYYAAFR0AAACrm1heHAArFAAAAABOAAAAAZuYW1lK78UFQAAAaAAAADocG9zdP+4ADIAAAeAAAAAIAABAAAAAQBC99tVOl8PPPUAAQPoAAAAANKJ1JUAAAAA0onqMP+S/ykEIQM5AAAAAwACAAAAAAAAAAEAAAPz/nYAAAQp/5L/yAQhAAEAAAAAAAAAAAAAAAAAAACrAABQAACsAAAAAwIGAZAABQAAArwCigAAAIwCvAKKAAAB3QAyAPoAAAIABQMHAAACAAOAAAAjAAAASAAAAAAAAAAAICAgIABAAAAiYALu/wYAAAPzAYoAAAABAAAAAAHDArwAAAAgAAIAAAAUAPYAAQAAAAAAAAAoAEYAAQAAAAAAAQAMAAcAAQAAAAAAAgAHAAAAAQAAAAAAAwAaAAcAAQAAAAAABAAMAAcAAQAAAAAABQAeACEAAQAAAAAABgAMAAcAAQAAAAAACQAHAD8AAQAAAAAADQAoAEYAAQAAAAAADgA4AG4AAwABBAkAAABQAKYAAwABBAkAAQAYAQQAAwABBAkAAgAOAPYAAwABBAkAAwA0AQQAAwABBAkABAAYAQQAAwABBAkABQA8ATgAAwABBAkABgAYAQQAAwABBAkACQAOAXQAAwABBAkADQBQAKYAAwABBAkADgBwAYJSZWd1bGFyQm9va2luc2FuaXR5OlZlcnNpb24gMS4wMDFWZXJzaW9uIDEuMDAxIERlY2VtYmVyIDYsIDIwMTVTb2xiZXJhQXR0cmlidXRpb24tU2hhcmVBbGlrZSA0LjAgSW50ZXJuYXRpb25hbGh0dHA') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+/* FORCE OVERRIDE OBSIDIAN'S DARK THEME */
+.app-container,
+.workspace,
+.workspace-leaf,
+.workspace-leaf-content,
+.view-content,
+.markdown-preview-view,
+.markdown-source-view,
+.cm-editor,
+.cm-content {
+    background-color: #fdf1dc !important;
+    color: #000 !important;
 }
 
-/* Page Setup */
-@page {
-    size: 8.5in 11in;
-    margin: 0.75in 0.5in 1in 0.5in;
-}
-
-/* Base Styles */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    font-family: BookSanity, "Libre Baskerville", "Times New Roman", serif;
-    font-size: 0.34cm;
-    line-height: 1.25;
-    color: #000;
-    
-    /* Mobile-compatible parchment background */
-    background-color: #fdf1dc;
+/* Override the main content area completely */
+body,
+.app-container {
+    background-color: #fdf1dc !important;
     background-image: 
-        /* Main parchment texture */
+        /* Parchment texture using gradients */
         radial-gradient(circle at 25% 25%, rgba(139, 117, 94, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 75% 75%, rgba(139, 117, 94, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(160, 140, 100, 0.03) 0%, transparent 30%),
@@ -58,584 +36,399 @@ body {
             45deg,
             transparent,
             transparent 2px,
-            rgba(139, 117, 94, 0.01) 2px,
-            rgba(139, 117, 94, 0.01) 4px
-        ),
-        repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 2px,
-            rgba(160, 140, 100, 0.01) 2px,
-            rgba(160, 140, 100, 0.01) 4px
-        );
-    
-    min-height: 100vh;
-    padding: 1cm;
-    margin: 0;
+            rgba(139, 117, 94, 0.02) 2px,
+            rgba(139, 117, 94, 0.02) 4px
+        ) !important;
+    color: #000 !important;
+}
+
+/* Force the reading view to have parchment background */
+.markdown-preview-view {
+    background: transparent !important;
+    padding: 2em !important;
+}
+
+.markdown-preview-sizer {
+    background: transparent !important;
+}
+
+/* Override ALL text colors to be dark on light */
+.markdown-preview-view,
+.markdown-preview-view *,
+.cm-editor,
+.cm-content,
+.cm-content * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+/* Base typography - force dark text */
+body {
+    font-family: "Libre Baskerville", "Times New Roman", serif !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #000 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 
-/* Column Layout for larger screens */
-@media screen and (min-width: 1024px) {
-    .two-column {
-        column-count: 2;
-        column-gap: 1cm;
-        column-rule: 1px solid #c9ad6a;
-        column-fill: auto;
-    }
-}
-
-/* Typography */
-p {
-    text-align: justify;
-    text-indent: 1em;
-    margin: 0;
-    orphans: 2;
-    widows: 2;
-}
-
-p + p {
-    margin-top: 0.5em;
-}
-
-/* Remove indent from first paragraph after headings */
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
-.no-indent {
-    text-indent: 0;
-}
-
-/* Drop Caps */
-.drop-cap::first-letter {
-    font-family: Cinzel, "Libre Baskerville", serif;
-    font-size: 3.5em;
-    font-weight: bold;
-    float: left;
-    line-height: 0.8;
-    margin: 0.05em 0.1em 0 0;
-    color: #58180D;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-}
-
-/* Headings */
+/* Headings - D&D style with proper colors */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Mr Eaves", Cinzel, "Libre Baskerville", serif;
-    font-weight: bold;
-    margin-bottom: 0.3em;
-    margin-top: 0.5em;
-    color: #58180D;
-    break-after: avoid;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    font-family: Cinzel, "Libre Baskerville", serif !important;
+    font-weight: bold !important;
+    color: #58180D !important;
+    background-color: transparent !important;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8) !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.5em !important;
 }
 
 h1 {
-    font-size: 1.5em;
-    color: #58180D;
-    border-bottom: 2px solid #c9ad6a;
-    margin-bottom: 0.4em;
-    padding-bottom: 0.1em;
-    break-before: auto;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
-    padding-left: 0.2em;
-    margin-left: -0.2em;
+    font-size: 2em !important;
+    border-bottom: 3px solid #58180D !important;
+    padding-bottom: 0.3em !important;
+    text-align: center !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+    padding: 0.5em !important;
+    border-radius: 8px !important;
+    margin-bottom: 1em !important;
 }
 
 h2 {
-    font-size: 1.2em;
-    color: #58180D;
-    border-bottom: 1px solid #c9ad6a;
-    margin-bottom: 0.3em;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
-    padding-left: 0.15em;
-    margin-left: -0.15em;
+    font-size: 1.5em !important;
+    border-bottom: 2px solid #c9ad6a !important;
+    padding-bottom: 0.2em !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%) !important;
+    padding-left: 0.5em !important;
+    margin-left: -0.5em !important;
 }
 
 h3 {
-    font-size: 1.1em;
-    color: #58180D;
-    border-bottom: 1px solid #c9ad6a;
-    margin-bottom: 0.2em;
+    font-size: 1.25em !important;
+    border-bottom: 1px solid #c9ad6a !important;
+    padding-bottom: 0.1em !important;
 }
 
 h4 {
-    font-size: 1em;
-    color: #58180D;
-    margin-bottom: 0.1em;
-    font-style: italic;
+    font-size: 1.1em !important;
+    font-style: italic !important;
+    color: #722F37 !important;
 }
 
-h5 {
-    font-size: 0.9em;
-    color: #58180D;
-    margin-bottom: 0.1em;
-    font-weight: normal;
-    font-style: italic;
+h5, h6 {
+    font-size: 1em !important;
+    font-style: italic !important;
+    color: #722F37 !important;
 }
 
-h6 {
-    font-size: 0.8em;
-    color: #58180D;
-    margin-bottom: 0.1em;
-    font-weight: normal;
-    font-style: italic;
+/* Paragraphs - remove any background, ensure dark text */
+p {
+    color: #000 !important;
+    background-color: transparent !important;
+    text-align: justify !important;
+    text-indent: 1em !important;
+    margin: 0.8em 0 !important;
+    line-height: 1.6 !important;
 }
 
-/* Lists */
-ul {
-    list-style-position: outside;
-    padding-left: 1.5em;
-    text-indent: 0;
+/* Remove indent after headings */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    text-indent: 0 !important;
 }
 
-ul li {
-    list-style-type: disc;
-    margin: 0.3em 0;
+/* Lists - force dark text */
+ul, ol {
+    color: #000 !important;
+    background-color: transparent !important;
+    margin: 1em 0 !important;
+    padding-left: 2em !important;
 }
 
-ol {
-    list-style-position: outside;
-    padding-left: 1.5em;
-    text-indent: 0;
+li {
+    color: #000 !important;
+    background-color: transparent !important;
+    margin: 0.3em 0 !important;
 }
 
-ol li {
-    list-style-type: decimal;
-    margin: 0.3em 0;
-}
-
-/* Nested lists */
-ul ul, ol ol, ul ol, ol ul {
-    margin: 0.2em 0;
-}
-
-ul ul li, ol ol li, ul ol li, ol ul li {
-    margin: 0.1em 0;
-}
-
-/* Text Styling */
+/* Strong/bold text */
 strong, b {
-    font-weight: bold;
-    color: #58180D;
+    color: #58180D !important;
+    font-weight: bold !important;
+    background-color: transparent !important;
 }
 
+/* Italic text */
 em, i {
-    font-style: italic;
+    color: #000 !important;
+    font-style: italic !important;
+    background-color: transparent !important;
 }
 
-u {
-    text-decoration: underline;
+/* BLOCKQUOTES - Fix the white text on light background issue */
+blockquote {
+    background-color: rgba(240, 230, 210, 0.8) !important;
+    border-left: 4px solid #58180D !important;
+    color: #000 !important;
+    padding: 1em 1.5em !important;
+    margin: 1.5em 0 !important;
+    font-style: italic !important;
+    border-radius: 0 8px 8px 0 !important;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
 }
 
-small {
-    font-size: 0.8em;
+/* Fix blockquote text being white */
+blockquote, blockquote * {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+blockquote::before {
+    content: '"' !important;
+    font-size: 3em !important;
+    color: rgba(88, 24, 13, 0.3) !important;
+    position: absolute !important;
+    top: -0.1em !important;
+    left: 0.3em !important;
+    font-family: serif !important;
+}
+
+/* Tables - D&D style */
+table {
+    width: 100% !important;
+    margin: 1.5em 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background-color: rgba(255, 250, 240, 0.95) !important;
+    border: 2px solid #58180D !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+th {
+    background: linear-gradient(180deg, #e69a28 0%, #d4841f 100%) !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding: 0.6em !important;
+    border: 1px solid #58180D !important;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+td {
+    background-color: transparent !important;
+    color: #000 !important;
+    padding: 0.5em !important;
+    border: 1px solid #c9ad6a !important;
+    vertical-align: top !important;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 245, 220, 0.5) !important;
+}
+
+/* Code blocks */
+code {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    color: #000 !important;
+    border: 1px solid #c9ad6a !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+pre {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000 !important;
+    border: 1px solid #c9ad6a !important;
+    padding: 1em !important;
+    border-radius: 6px !important;
+    margin: 1.5em 0 !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+pre code {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
 }
 
 /* Links */
 a {
-    color: #58180D;
-    text-decoration: underline;
+    color: #58180D !important;
+    text-decoration: underline !important;
+    background-color: transparent !important;
 }
 
 a:hover {
-    color: #c9ad6a;
+    color: #c9ad6a !important;
 }
 
-/* Tables */
-table {
-    font-family: BookSanity, "Libre Baskerville", serif;
-    width: 100%;
-    margin: 1em 0 0.5em 0;
-    font-size: 10pt;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid #c9ad6a;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
+/* Special D&D Classes */
 
-table thead {
-    font-weight: bold;
-    background: linear-gradient(180deg, #e69a28 0%, #d4841f 100%);
-    color: #fff;
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
-}
-
-table thead th {
-    vertical-align: bottom;
-    padding: 0.4em 0.6em;
-    border: 1px solid #58180D;
-    text-align: center;
-}
-
-table tbody tr {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-table tbody tr:nth-child(odd) {
-    background: rgba(255, 245, 220, 0.6);
-}
-
-table tbody td {
-    padding: 0.4em 0.6em;
-    border: 1px solid #c9ad6a;
-    vertical-align: top;
-}
-
-/* Special Table Styles */
-.wide table {
-    margin: 1.5em -0.5cm;
-    width: calc(100% + 1cm);
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Blockquotes */
-blockquote {
-    font-family: BookSanity, "Libre Baskerville", serif;
-    font-style: italic;
-    background: linear-gradient(135deg, rgba(255, 255, 240, 0.8) 0%, rgba(250, 245, 220, 0.8) 100%);
-    border-left: 4px solid #c9ad6a;
-    border-radius: 0 6px 6px 0;
-    margin: 1em 0;
-    padding: 0.6em 1em;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    break-inside: avoid;
-}
-
-blockquote::before {
-    content: '"';
-    font-family: serif;
-    font-size: 2.5em;
-    color: rgba(88, 24, 13, 0.3);
-    position: absolute;
-    top: -0.2em;
-    left: 0.2em;
-    line-height: 1;
-}
-
-blockquote p {
-    margin: 0;
-    text-indent: 0;
-}
-
-blockquote p + p {
-    margin-top: 0.5em;
-}
-
-/* Code */
-code {
-    font-family: 'Courier New', 'Lucida Console', monospace;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid #c9ad6a;
-    border-radius: 3px;
-    padding: 0.1em 0.3em;
-    font-size: 0.9em;
-}
-
-pre {
-    font-family: 'Courier New', 'Lucida Console', monospace;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #c9ad6a;
-    border-radius: 4px;
-    padding: 0.8em;
-    margin: 1em 0;
-    overflow-x: auto;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    break-inside: avoid;
-}
-
-pre code {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-/* Horizontal Rules */
-hr {
-    border: none;
-    border-top: 1px solid #c9ad6a;
-    margin: 1.5em 0;
-    opacity: 0.6;
-}
-
-/* Special D&D Elements */
-
-/* Spell/Ability/Feature Blocks */
+/* Spell blocks */
 .spell, .ability, .feature {
-    background: linear-gradient(135deg, rgba(255, 255, 230, 0.9) 0%, rgba(250, 245, 220, 0.9) 100%);
-    border: 2px solid #c9ad6a;
-    border-radius: 6px;
-    padding: 0.8em;
-    margin: 1em 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    break-inside: avoid;
-    position: relative;
+    background: linear-gradient(135deg, rgba(255, 248, 230, 0.9) 0%, rgba(250, 240, 210, 0.9) 100%) !important;
+    border: 2px solid #58180D !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    margin: 1.5em 0 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15) !important;
+    position: relative !important;
 }
 
 .spell::before, .ability::before, .feature::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #58180D, #c9ad6a, #58180D);
-    border-radius: 4px 4px 0 0;
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #58180D, #c9ad6a, #58180D) !important;
+    border-radius: 6px 6px 0 0 !important;
+}
+
+.spell *, .ability *, .feature * {
+    color: #000 !important;
+    background-color: transparent !important;
 }
 
 .spell-title, .ability-title, .feature-title {
-    font-weight: bold;
-    color: #58180D;
-    font-size: 1.1em;
-    margin: 0 0 0.5em 0;
-    border-bottom: 1px solid #c9ad6a;
-    padding-bottom: 0.2em;
+    font-weight: bold !important;
+    color: #58180D !important;
+    font-size: 1.2em !important;
+    margin: 0 0 0.5em 0 !important;
+    border-bottom: 1px solid #c9ad6a !important;
+    padding-bottom: 0.3em !important;
+    background-color: transparent !important;
 }
 
-/* Stat Blocks */
+/* Stat blocks */
 .stat-block {
-    background: linear-gradient(135deg, rgba(255, 235, 205, 0.95) 0%, rgba(245, 225, 195, 0.95) 100%);
-    border: 2px solid #58180D;
-    border-radius: 8px;
-    padding: 0.8em;
-    margin: 1em 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    break-inside: avoid;
-    position: relative;
+    background: linear-gradient(135deg, rgba(255, 240, 220, 0.95) 0%, rgba(245, 230, 200, 0.95) 100%) !important;
+    border: 3px solid #58180D !important;
+    border-radius: 10px !important;
+    padding: 1em !important;
+    margin: 1.5em 0 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    position: relative !important;
 }
 
 .stat-block::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    height: 6px;
-    background: linear-gradient(90deg, #c9ad6a, #58180D, #c9ad6a);
-    border-radius: 8px 8px 0 0;
+    content: "" !important;
+    position: absolute !important;
+    top: -3px !important;
+    left: -3px !important;
+    right: -3px !important;
+    height: 8px !important;
+    background: linear-gradient(90deg, #c9ad6a, #58180D, #c9ad6a) !important;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.stat-block * {
+    color: #000 !important;
+    background-color: transparent !important;
 }
 
 .stat-block h4 {
-    margin: 0 0 0.5em 0;
-    text-align: center;
-    border-bottom: 2px solid #58180D;
-    padding-bottom: 0.3em;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
-    color: #58180D;
-    font-size: 1.2em;
+    text-align: center !important;
+    font-size: 1.3em !important;
+    margin: 0 0 0.5em 0 !important;
+    border-bottom: 2px solid #58180D !important;
+    padding-bottom: 0.3em !important;
 }
 
-.stat-block p {
-    text-indent: 0;
-    margin: 0.3em 0;
-}
-
-/* Notes and Sidebars */
+/* Notes and sidebars */
 .note {
-    background: linear-gradient(135deg, rgba(255, 250, 230, 0.9) 0%, rgba(255, 248, 220, 0.9) 100%);
-    border: 1px solid #c9ad6a;
-    border-radius: 4px;
-    padding: 0.6em;
-    margin: 0.8em 0;
-    font-size: 0.9em;
-    font-style: italic;
-    break-inside: avoid;
+    background: rgba(255, 252, 240, 0.9) !important;
+    border: 1px solid #c9ad6a !important;
+    border-radius: 6px !important;
+    padding: 0.8em !important;
+    margin: 1em 0 !important;
+    font-size: 0.95em !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.note * {
+    color: #000 !important;
+    background-color: transparent !important;
 }
 
 .sidebar {
-    background: linear-gradient(135deg, rgba(245, 240, 225, 0.9) 0%, rgba(240, 235, 220, 0.9) 100%);
-    border: 1px solid #58180D;
-    border-radius: 6px;
-    padding: 0.8em;
-    margin: 1em 0;
-    font-size: 0.95em;
-    break-inside: avoid;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(245, 240, 225, 0.9) !important;
+    border: 2px solid #58180D !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    margin: 1em 0 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Monster/NPC blocks */
-.monster {
-    background: linear-gradient(135deg, rgba(255, 240, 220, 0.95) 0%, rgba(250, 235, 210, 0.95) 100%);
-    border: 3px solid #58180D;
-    border-radius: 8px;
-    padding: 1em;
-    margin: 1em 0;
-    break-inside: avoid;
-    position: relative;
+.sidebar * {
+    color: #000 !important;
+    background-color: transparent !important;
 }
 
-.monster::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    height: 8px;
-    background: linear-gradient(90deg, #58180D, #c9ad6a, #58180D);
-    border-radius: 8px 8px 0 0;
+/* Drop caps */
+.drop-cap::first-letter {
+    font-family: Cinzel, serif !important;
+    font-size: 4em !important;
+    font-weight: bold !important;
+    float: left !important;
+    line-height: 0.8 !important;
+    margin: 0.1em 0.1em 0 0 !important;
+    color: #58180D !important;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
 }
 
-.monster h4 {
-    margin: 0 0 0.3em 0;
-    color: #58180D;
-    font-size: 1.3em;
-    text-align: center;
-    border-bottom: 2px solid #58180D;
-    padding-bottom: 0.2em;
+/* Horizontal rules */
+hr {
+    border: none !important;
+    border-top: 2px solid #c9ad6a !important;
+    margin: 2em 0 !important;
+    opacity: 0.7 !important;
 }
 
-/* Magic Items */
-.magic-item {
-    background: linear-gradient(135deg, rgba(240, 235, 255, 0.9) 0%, rgba(235, 230, 250, 0.9) 100%);
-    border: 2px solid #6B46C1;
-    border-radius: 6px;
-    padding: 0.8em;
-    margin: 1em 0;
-    break-inside: avoid;
-    box-shadow: 0 2px 4px rgba(107, 70, 193, 0.2);
-}
-
-.magic-item-title {
-    font-weight: bold;
-    color: #6B46C1;
-    font-size: 1.1em;
-    margin: 0 0 0.5em 0;
-    border-bottom: 1px solid #6B46C1;
-    padding-bottom: 0.2em;
-}
-
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.no-indent {
-    text-indent: 0 !important;
-}
-
-.small {
-    font-size: 0.8em;
-}
-
-.large {
-    font-size: 1.2em;
-}
-
-.page-break {
-    break-before: page;
-}
-
-.no-break {
-    break-inside: avoid;
-}
-
-.no-print {
-    display: block;
-}
-
-/* Print Styles */
+/* Print styles */
 @media print {
-    body {
-        font-size: 9pt;
-        padding: 0.5cm;
-        background: #fdf1dc !important;
-        -webkit-print-color-adjust: exact;
-        color-adjust: exact;
+    body, .app-container, .workspace, .markdown-preview-view {
+        background-color: #fdf1dc !important;
+        color: #000 !important;
+        font-size: 11pt !important;
     }
     
     .no-print {
         display: none !important;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
-        break-after: avoid;
-    }
-    
-    .spell, .ability, .feature, .stat-block, .monster, .magic-item {
-        break-inside: avoid;
-        box-shadow: none;
-    }
-    
-    blockquote {
-        break-inside: avoid;
-    }
-    
-    table {
-        font-size: 8pt;
-    }
-    
-    .two-column {
-        column-count: 1;
-    }
 }
 
-/* Mobile Responsive */
+/* Mobile responsive */
 @media screen and (max-width: 768px) {
     body {
-        padding: 0.5cm;
-        font-size: 11pt;
-        line-height: 1.4;
+        font-size: 16px !important;
+        line-height: 1.7 !important;
     }
     
-    .two-column {
-        column-count: 1;
-    }
-    
-    h1 {
-        font-size: 1.4em;
-    }
-    
-    h2 {
-        font-size: 1.25em;
-    }
-    
-    table {
-        font-size: 9pt;
-    }
-    
-    .drop-cap::first-letter {
-        font-size: 2.5em;
-        margin-right: 0.05em;
-    }
-    
-    .wide table {
-        margin: 1em -0.3cm;
-        width: calc(100% + 0.6cm);
-    }
-    
-    /* Reduce shadows on mobile for better performance */
-    .spell, .ability, .feature, .stat-block, .monster, .magic-item {
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    }
-}
-
-/* Small mobile devices */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 10pt;
-        padding: 0.3cm;
+    .markdown-preview-view {
+        padding: 1em !important;
     }
     
     h1 {
-        font-size: 1.3em;
+        font-size: 1.8em !important;
     }
     
     h2 {
-        font-size: 1.2em;
+        font-size: 1.4em !important;
     }
     
-    .drop-cap::first-letter {
-        font-size: 2em;
+    h3 {
+        font-size: 1.2em !important;
     }
     
     table {
-        font-size: 8pt;
+        font-size: 0.9em !important;
+    }
+    
+    .drop-cap::first-letter {
+        font-size: 3em !important;
     }
 }
