@@ -332,7 +332,7 @@ li {
 
 /* Mobile Responsiveness - Single Column on Small Screens */
 @media screen and (max-width: 768px) {
-    .markdown-preview-view > div {
+    .markdown-preview-view {
         columns: 1 !important;
         column-rule: none !important;
     }
